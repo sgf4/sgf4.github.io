@@ -4,9 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>sgf4 - Posts</title>
+        <meta name="author" content="sgf4">
+        <meta name="generator" content="holyc">
+        <meta name="description" content="Repeat macro in C? Sometimes we want to repeat something at compile time using C">
+        <meta name="keywords" content="sgf4, C, Macros, C Macros, Repeat Macro C, C Repeat Macro">
+        <meta name="robots" content="index, follow">
+
+        <title>sgf4's Repeat Macro in C</title>
         <link rel="stylesheet" href="/css/main.css">
-        <link rel="icon" href="https://avatars.githubusercontent.com/u/112823164?v=4">
+        <link rel="icon" href="https://avatars.githubusercontent.com/u/112823164?v=4">  
     </head>
     <body>
         <header></header>
@@ -25,7 +31,7 @@
             <p>Sometimes we want to repeat something at compile time using C, although this sounds difficult to elaborate.
 Trying I managed to elaborate the following example:</p>
             <div class="container code">
-            <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(40, 40, 40); color: rgb(235, 219, 178);"><span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">include</span> <span class="hljs-meta-string" style="color: rgb(184, 187, 38);">&lt;stdio.h&gt;</span></span>
+            <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(235, 219, 178);"><span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">include</span> <span class="hljs-meta-string" style="color: rgb(184, 187, 38);">&lt;stdio.h&gt;</span></span>
 <span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">define</span> REPEAT_1(FN) FN(0)</span>
 <span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">define</span> REPEAT_2(FN) REPEAT_1(FN) FN(1)</span>
 <span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">define</span> REPEAT_3(FN) REPEAT_2(FN) FN(2)</span>
@@ -69,7 +75,7 @@ Trying I managed to elaborate the following example:</p>
             <p>We will need to specify more REPEAT macros if we need repeating more than 10 times. </p>
             <p>Here's the REPEAT macro which can repeat 100 times:</p>
             <div class="container code">
-                <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(40, 40, 40); color: rgb(235, 219, 178);"><span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">define</span> REPEAT_1(FN) FN(0)</span>
+                <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(235, 219, 178);"><span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">define</span> REPEAT_1(FN) FN(0)</span>
 <span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">define</span> REPEAT_2(FN) REPEAT_1(FN) FN(1)</span>
 <span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">define</span> REPEAT_3(FN) REPEAT_2(FN) FN(2)</span>
 <span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">define</span> REPEAT_4(FN) REPEAT_3(FN) FN(3)</span>
