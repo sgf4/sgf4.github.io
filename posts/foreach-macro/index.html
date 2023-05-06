@@ -45,7 +45,7 @@
             <h3>How to calculate the number of arguments?</h3>
             <p>We can start defining our <b>N_VA_ARGS</b> macro like this</p>
             <div class="container code">
-<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(40, 40, 40); color: rgb(235, 219, 178);"><span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">define</span> N_VA_ARGS_(_9,_8,_7,_6,_5,_4,_3,_2,_1, N, ...) N</span>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(235, 219, 178);"><span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">define</span> N_VA_ARGS_(_9,_8,_7,_6,_5,_4,_3,_2,_1, N, ...) N</span>
 <span class="hljs-meta" style="color: rgb(254, 128, 25);">#<span class="hljs-meta-keyword" style="color: rgb(142, 192, 124);">define</span> N_VA_ARGS(...) N_VA_ARGS_(__VA_ARGS__ __VA_OPT__(,) 9,8,7,6,5,4,3,2,1,0)</span></pre>
             </div>
             
